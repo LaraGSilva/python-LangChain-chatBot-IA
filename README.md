@@ -1,4 +1,4 @@
-# Projeto de chatbot com Inteligencia Artificial - Eurofarma
+# Chatbot com Inteligencia Artificial - Eurofarma
 
 Este projeto tem como objetivo desenvolver um chatbot inteligente utilizando a biblioteca LangChain e a API do OpenAI para fornecer informações detalhadas sobre a Eurofarma, suas operações e benefícios.
 
@@ -16,20 +16,10 @@ O projeto está organizado da seguinte forma:
 
 ## Dependências
 
-Certifique-se de ter as seguintes dependências instaladas:
-
 - `streamlit`
 - `streamlit-chat`
 - `langchain`
 - `openai`
-
-
-2. **Estrutura do Projeto**:
-
-    - **`app.py`**: Script principal para executar a aplicação Streamlit.
-    - **`util/embeddings.py`**: Scripts para criar e gerenciar `vectorstore` e cadeia de conversação.
-    - **`util/file.py`**: Scripts para manipulação de arquivos e texto.
-    - **`html/template.py`**: Templates HTML para exibição do chatbot.
 
 ## Fluxo da LLM
 
