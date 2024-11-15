@@ -19,13 +19,13 @@ img_bot_path = os.path.abspath('./img/chatbot_img.png')
 # from dotenv import load_dotenv
 # load_dotenv()
 
-api_key = st.secrets['api_key']
+openai_api_key = st.secrets['openai_api_key']
 
 
-if api_key is None:
+if openai_api_key is None:
     print("openai_api_key não encontrado no arquivo .env")
 else:
-    print(f"Token da API carregado com sucesso: {api_key[:5]}...")
+    print(f"Token da API carregado com sucesso: {openai_api_key[:5]}...")
 
 def main():
     
