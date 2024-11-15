@@ -13,7 +13,7 @@ from util.embeddins import create_vectorstore, create_conversation_chain
 from util.file import create_text_chunks, process_files
 from util.template import bot_template,user_template
 
-img_logo_path = os.path.abspath('flor.png')
+img_logo_path = os.path.abspath('png-clipart-cut-flowers-drawing-flower.png')
 img_bot_path = os.path.abspath('./img/chatbot_img.png')
 
 # from dotenv import load_dotenv
