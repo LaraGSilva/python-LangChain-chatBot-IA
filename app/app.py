@@ -19,8 +19,8 @@ img_bot_path = os.path.abspath('./img/chatbot_img.png')
 # from dotenv import load_dotenv
 # load_dotenv()
 
-
-
+#teste
+#czxcxzczxcxz
 openai_api_key = st.secrets['OPENAI_API_KEY']
 
 if openai_api_key is None:
