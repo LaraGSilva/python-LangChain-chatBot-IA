@@ -13,7 +13,7 @@ from util.embeddins import create_vectorstore, create_conversation_chain
 from util.file import create_text_chunks, process_files
 from util.template import bot_template,user_template
 
-img_logo_path = os.path.abspath('png-clipart-cut-flowers-drawing-flower.png')
+#img_logo_path = os.path.abspath('png-clipart-cut-flowers-drawing-flower.png')
 img_bot_path = os.path.abspath('./img/chatbot_img.png')
 
 # from dotenv import load_dotenv
@@ -131,7 +131,7 @@ def main():
                     st.markdown(bot_template.replace('{{MSG}}', text.content), unsafe_allow_html=True)
 
     with st.sidebar:
-        st.image(img_logo_path, width=120)
+        #st.image(img_logo_path, width=120)
 
         pdf_docs = st.file_uploader('Área de upload de documentos', accept_multiple_files=True)
 
