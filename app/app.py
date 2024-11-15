@@ -22,7 +22,7 @@ img_bot_path = os.path.abspath('./img/chatbot_img.png')
 api_key = st.secrets['api_key']
 
 
-if openai_api_key is None:
+if api_key is None:
     print("openai_api_key não encontrado no arquivo .env")
 else:
     print(f"Token da API carregado com sucesso: {api_key[:5]}...")
