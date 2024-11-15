@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_chat import message
+from streamlit import chat_message
 import sys
 import os
 
@@ -13,13 +13,14 @@ from util.embeddins import create_vectorstore, create_conversation_chain
 from util.file import create_text_chunks, process_files
 from util.template import bot_template,user_template
 
-img_logo_path = os.path.abspath('./img/Eurofarma_logo.png')
+img_logo_path = os.path.abspath('flor.png')
 img_bot_path = os.path.abspath('./img/chatbot_img.png')
 
 # from dotenv import load_dotenv
 # load_dotenv()
 
-openai_api_key = st.secrets['OPENAI_API_KEY']
+openai_api_key = st.secrets['api_key']
+
 
 if openai_api_key is None:
     print("openai_api_key não encontrado no arquivo .env")
@@ -28,28 +29,30 @@ else:
 
 def main():
     
-    st.set_page_config(page_title='EuroFarma - ChatBot', page_icon=':books:')
+    st.set_page_config(page_title='Flor do Nordeste', page_icon=':books:')
 
     st.markdown(
         '''
         <style>
             [data-testid="stSidebar"] {
-            background-color: #FFF253;
+            background-color: #FA7921;
             color: black;
-            padding: 20px;
+            padding: 10px;
             }
 
             
             [data-testid="stSidebar"] .sidebar-title-container {
               display: flex;
               align-items: center;
-              margin-bottom: 20px;
+              margin-bottom: 10px;
+              
             }
 
             [data-testid="stSidebar"] .sidebar-title-container img {
               width: 90px;
               height: auto;
               margin-right: 20px;
+              
             }
 
             [data-testid="stSidebar"] .sidebar-title-container h1 {
@@ -62,10 +65,10 @@ def main():
             padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem; display: flex
             }
             .chat-message.user {
-                background-color: #09378e
+                background-color: #FE9920
             }
             .chat-message.bot {
-                background-color: #748ab6
+                background-color: #007090
             }
             .chat-message .avatar {
             width: 10%;
@@ -107,7 +110,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    st.subheader('Bem vindo ao ChatBot da Eurofarma!', divider='gray')
+    st.subheader('Bem vindo ao ChatBot da Flor do Nordeste!', divider='gray')
     user_question = st.text_input('Inicie nossa conversa :)')
 
     if 'conversation' not in st.session_state:
@@ -127,7 +130,8 @@ def main():
                     st.markdown(bot_template.replace('{{MSG}}', text.content), unsafe_allow_html=True)
 
     with st.sidebar:
-        st.image(img_logo_path, width=240)
+        st.image(img_logo_path, width=120)
+
         pdf_docs = st.file_uploader('Área de upload de documentos', accept_multiple_files=True)
 
         if pdf_docs:
