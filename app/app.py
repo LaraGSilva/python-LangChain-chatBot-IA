@@ -25,7 +25,7 @@ openai_api_key = st.secrets['api_key']
 if openai_api_key is None:
     print("openai_api_key não encontrado no arquivo .env")
 else:
-    print(f"Token da API carregado com sucesso: {openai_api_key[:5]}...")
+    print(f"Token da API carregado com sucesso: {api_key[:5]}...")
 
 def main():
     
